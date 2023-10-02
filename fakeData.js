@@ -25,8 +25,8 @@ export const blogs = [
     },
     {
       id: 4,
-      name: "Kupa samsu",
-      per_img: "https://media.istockphoto.com/id/524578309/photo/men-smiling-portrait.jpg?s=1024x1024&w=is&k=20&c=WM28Kg3W62gBXamPvFovZ4k64gQ0xQUxw8e8ZSheDRk=",
+      name: "Mr. Tamim",
+      per_img: "https://images.unsplash.com/photo-1504593811423-6dd665756598?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       img: "https://media.istockphoto.com/id/1437841710/photo/laptop-computer-displaying-graphs-and-charts.jpg?s=1024x1024&w=is&k=20&c=6PoaKfBvrgtn8IArybKs9xyBxmkqwwuTCVu-u-0kTuk=",
       Description : "How to get your first job as a self-taught programmer",
     },
