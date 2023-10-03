@@ -6,7 +6,9 @@ import "./App.css"
 import BlogsCart from './Components/Cart/BlogsCart';
 const App = () => {
  const[readTime, setReadTime] = useState();
+ const[bookMark, setBookMark] = useState();
  console.log(readTime);
+
 const handleDescription = (time) =>{
      const previousTime = JSON.parse(localStorage.getItem("ReadingTime"));
     if(previousTime){
@@ -21,6 +23,45 @@ const handleDescription = (time) =>{
     }
 }
 
+ 
+
+// const handleBookmark = (B) =>{
+//      const previousBM = JSON.parse(localStorage.getItem("BookMark"));
+//     if(previousBM){
+//       const sum = previousBM+B;
+//       localStorage.setItem("BookMark", sum)
+//       // console.log(sum);
+//       setBookMark(sum)
+//     }
+//     else{
+//       localStorage.setItem("BookMark", B);
+//       setBookMark(previousBM)
+//     }
+// }
+
+
+
+const handleBookmark = (B) =>{
+  const previousBM = JSON.parse(localStorage.getItem("BookMark"));
+ if(previousBM){
+   const sum = previousBM+B;
+   localStorage.setItem("BookMark", B)
+   // console.log(sum);
+   setBookMark(B)
+ }
+ else{
+   localStorage.setItem("BookMark", B);
+   setBookMark(previousBM)
+ }
+}
+
+
+
+
+
+
+
+
   return (
     <div>
       <Header></Header>
@@ -30,13 +71,13 @@ const handleDescription = (time) =>{
       {
       
       blogs.map((blog) => (
-        <Blogs blog = {blog} handleDescription={handleDescription}></Blogs>
+        <Blogs blog = {blog} handleDescription={handleDescription} handleBookmark={handleBookmark}></Blogs>
       ))
     }
       
       </div>
       <div className='cart-container'>
-      <BlogsCart readTime={readTime}></BlogsCart>
+      <BlogsCart bookMark={bookMark}  readTime={readTime}></BlogsCart>
       </div>
   </div>
    
