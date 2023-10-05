@@ -4,6 +4,7 @@ import Blogs from './Components/Blogs/Blogs';
 import {blogs} from "../fakeData";
 import "./App.css"
 import BlogsCart from './Components/Cart/BlogsCart';
+import Questions from './Components/Questions/Questions';
 const App = () => {
  const[readTime, setReadTime] = useState();
  const[bookmark, setbookmark] = useState();
@@ -71,7 +72,7 @@ const handleBookmark = (bookmark) =>{
       </div>
   </div>
    
-
+<Questions></Questions>
      
     </div>
   );

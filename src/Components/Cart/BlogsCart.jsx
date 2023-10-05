@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SingleCarts from "./SingleCarts";
+
 
 const BlogsCart = ({ readTime, bookMark }) => {
   console.log(readTime);
